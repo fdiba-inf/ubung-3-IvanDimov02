@@ -8,13 +8,13 @@ public class NumberCounter {
         Scanner input = new Scanner(System.in);
 
         double number = input.nextDouble();
-        double positive = 0;
-        double negative = 0;
-        double sum = 0;
+        double positive = 0.0;
+        double negative = 0.0;
+        double sum = 0.0;
         
 
-        while (number != 0) {
-          if (number > 0) {
+        while (number != 0.0) {
+          if (number > 0.0) {
             positive++;
           } else {
             negative++;
