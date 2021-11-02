@@ -6,29 +6,32 @@ public class NumberCounter {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
-        double number = input.nextDouble();
-        double positive = 0.0;
-        double negative = 0.0;
+        int i = input.nextInt();
         double sum = 0.0;
-        
+        int pos = 0;
+        int neg = 0;
 
-        while (number != 0.0) {
-          if (number > 0.0) {
-            positive++;
-          } else {
-            negative++;
+        while( i != 0){
+
+          if(i >= 0){
+            pos ++;
           }
-          sum = sum + number;
-          number = input.nextDouble();
+          else{
+            neg ++;
+          }
+          sum = sum + i;
+          i = input.nextInt();
         }
+        double aver = sum/(pos + neg);
 
-        double average = sum / (positive + negative);
-        System.out.println("Positive numbers: " + positive);
-        System.out.println("Negative numbers: " + negative);
+        System.out.println("Positive numbers: " + pos);
+        System.out.println("Negative numbers: " + neg);
         System.out.println("Sum: " + sum);
-        System.out.println("Average: " + average);
+        System.out.println("Average: " + aver);
+
+
+
+        
     }
 
 }
-
